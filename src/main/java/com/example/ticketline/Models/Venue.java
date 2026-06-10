@@ -24,7 +24,7 @@ public class Venue {
 
     @Column(nullable = false, length = 100)
     private String city; // Essencial para filtros de busca de eventos
-
+                                                                                        
     @Column(nullable = false)
     private int availability; // Limite máximo de segurança do local
 

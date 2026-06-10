@@ -1,8 +1,10 @@
 package com.example.ticketline.Models;
 
+import com.example.ticketline.Models.Enum.EventStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -25,6 +27,9 @@ public class Event {
     private Date date;
     private Integer total_seats;
     private Integer available_seats;
+
+    @Enumerated(EnumType.STRING)
+    private EventStatus eventStatus;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

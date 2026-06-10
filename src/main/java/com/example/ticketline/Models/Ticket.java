@@ -67,7 +67,7 @@ public class Ticket {
     @PrePersist
     protected void onCreate() {
         this.created_at = LocalDateTime.now();
-        this.created_at = LocalDateTime.now();
+        this.updated_at = LocalDateTime.now();
     }
 
     @PreUpdate

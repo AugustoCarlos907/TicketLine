@@ -17,7 +17,7 @@ public class Seat {
     private  long id;
 
     private String seat_number;
-    private String section ; //VIP / Normal
+    private Boolean section ;  // ? VIP : Normal
     private Double price;
 
     private LocalDateTime created_at ;
@@ -31,7 +31,7 @@ public class Seat {
     @PrePersist
     protected void onCreate() {
         this.created_at = LocalDateTime.now();
-        this.created_at = LocalDateTime.now();
+        this.updated_at = LocalDateTime.now();
     }
 
     @PreUpdate
